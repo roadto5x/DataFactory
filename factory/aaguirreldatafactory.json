@@ -1,0 +1,9 @@
+{
+	"name": "aaguirreldatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e7a33169-116b-457a-9c32-621864bf5019",
+		"tenantId": "39b3d4f1-d985-4ca8-bc59-e8f34620f994"
+	}
+}
