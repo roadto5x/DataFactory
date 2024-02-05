@@ -131,7 +131,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/andres.tk_10@hotmail.com/Transferencia_de_datos_CapaPlata"
+					"notebookPath": "/Users/andres.tk_10@hotmail.com/TD_capaplata"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks_DataFactory",
