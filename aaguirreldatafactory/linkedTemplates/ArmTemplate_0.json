@@ -114,6 +114,78 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/PF_Pipeline_capaoro')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "CapaOro",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/andres.tk_10@hotmail.com/TD_capaoro_PF"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks_DataFactory",
+							"type": "LinkedServiceReference"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks_DataFactory')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/PF_Pipeline_capaplata')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Capaplata",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/andres.tk_10@hotmail.com/TD_capaplata"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks_DataFactory",
+							"type": "LinkedServiceReference"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks_DataFactory')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/InputFileCopyDS')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -225,7 +297,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/PF_Pipeline')]",
+			"name": "[concat(parameters('factoryName'), '/PF_Pipeline_capabronce')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -347,26 +419,6 @@
 								}
 							]
 						}
-					},
-					{
-						"name": "Notebook1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Users/andres.tk_10@hotmail.com/TD_capaplata"
-						},
-						"linkedServiceName": {
-							"referenceName": "AzureDatabricks_DataFactory",
-							"type": "LinkedServiceReference"
-						}
 					}
 				],
 				"policy": {
@@ -377,7 +429,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/InputFilesDS')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks_DataFactory')]",
 				"[concat(variables('factoryId'), '/datasets/InputFileCopyDS')]",
 				"[concat(variables('factoryId'), '/datasets/OutputFilesDS')]"
 			]
