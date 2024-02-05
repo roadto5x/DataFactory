@@ -1,5 +1,5 @@
 {
-	"name": "PF_Pipeline",
+	"name": "PF_Pipeline_capabronce",
 	"properties": {
 		"activities": [
 			{
@@ -116,26 +116,6 @@
 							]
 						}
 					]
-				}
-			},
-			{
-				"name": "Notebook1",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/andres.tk_10@hotmail.com/TD_capaplata"
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureDatabricks_DataFactory",
-					"type": "LinkedServiceReference"
 				}
 			}
 		],
