@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "aaguirreldatafactory"
+		},
+		"AzureDatabricks_DataFactory_accessToken": {
+			"value": ""
+		},
+		"InputFileCopy_ADLS_accountKey": {
+			"value": ""
+		},
+		"InputFiles_ADLS_accountKey": {
+			"value": ""
+		},
+		"Output_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks_DataFactory_properties_typeProperties_existingClusterId": {
+			"value": "0204-170921-z1hzju3t"
+		},
+		"InputFileCopy_ADLS_properties_typeProperties_url": {
+			"value": "https://aaguirrelstorage.dfs.core.windows.net/"
+		},
+		"InputFiles_ADLS_properties_typeProperties_url": {
+			"value": "https://aaguirrelstorage.dfs.core.windows.net/"
+		},
+		"Output_properties_typeProperties_url": {
+			"value": "https://aaguirrelstorage.dfs.core.windows.net/"
+		}
+	}
+}
