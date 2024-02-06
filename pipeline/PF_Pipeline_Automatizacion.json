@@ -34,6 +34,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PF_Pipeline_capaoro",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
