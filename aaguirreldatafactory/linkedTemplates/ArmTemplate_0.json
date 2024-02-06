@@ -473,7 +473,31 @@
 						"userProperties": [],
 						"typeProperties": {
 							"pipeline": {
-								"referenceName": "PF_Pipeline_capaoro",
+								"referenceName": "PF_Pipeline_capaplata",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
+					},
+					{
+						"name": "Execute_Transform2",
+						"type": "ExecutePipeline",
+						"dependsOn": [
+							{
+								"activity": "Execute_Transform",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "PF_Pipeline_capaplata",
 								"type": "PipelineReference"
 							},
 							"waitOnCompletion": true,
@@ -488,7 +512,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/PF_Pipeline_capabronce')]",
-				"[concat(variables('factoryId'), '/pipelines/PF_Pipeline_capaoro')]"
+				"[concat(variables('factoryId'), '/pipelines/PF_Pipeline_capaplata')]"
 			]
 		}
 	]
